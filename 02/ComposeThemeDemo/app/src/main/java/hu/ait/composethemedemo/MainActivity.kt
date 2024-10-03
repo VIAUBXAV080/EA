@@ -32,6 +32,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+
             ComposeThemeDemoTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
@@ -41,6 +42,7 @@ class MainActivity : ComponentActivity() {
                     Movies()
                 }
             }
+
         }
     }
 }
@@ -65,6 +67,7 @@ fun Movies(modifier: Modifier = Modifier) {
             imageResourceId = R.drawable.forrest
         ))
     }
+
 }
 
 @Composable
@@ -94,7 +97,7 @@ fun MovieCard(movie: Movie, modifier: Modifier = Modifier) {
             Text(
                 text = movie.title,
                 style = MaterialTheme.typography.titleLarge,
-                color = MaterialTheme.colorScheme.onPrimary
+                color = MaterialTheme.colorScheme.primary
                 //color = TitleHighlighted
             )
             Spacer(modifier = Modifier.height(8.dp))
